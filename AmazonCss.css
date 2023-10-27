@@ -1,0 +1,220 @@
+body{
+    padding: 0px 0px 0px 0px;
+    font-family: Roboto, Arial;
+    display: inline-block;
+    flex-direction: row;
+}
+.Logo:hover,.ReturnsAndOrders:hover,.korpaIkona:hover{
+    border: solid 1px;
+    border-color: white;
+    /* padding: 5px; */
+}
+.LogoHuawei{
+    width: 200px;
+    margin-bottom: 4px;
+}
+.Logo:hover
+.VrhStranice,header{
+    display: flex;
+    align-items: center;
+}
+
+.SearchBar{
+    margin-left: 120px;
+    height: 35px;
+    width: 650px;
+    padding-left: 10px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+.srednjiDiv{
+    margin-top: 5px;
+    display: flex;
+}
+.glavniDiv{
+    background-color: rgb(255, 255, 255);
+    margin-top: 70px;
+    border-left-width: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.searchDiv2{
+    /* margin-bottom: 40px; */
+    display: flex;
+    align-items: center;
+}
+header{
+     background-color : rgb(19, 25, 33);
+     width: 100%;
+ height: 70px;    
+ top: 0;
+ position: fixed;
+ left: 0;
+}
+.Logo{
+    width: 100px;
+    margin-left: 20px;
+    /* margin-top: 30px; */
+}
+.searchDiv1,.searchDiv2{
+    /* display: flex; */
+    /* flex-direction: row; */
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+}
+.searchDiv2{
+    background-color: rgb(254, 189, 105);
+    height: 40px;
+    width: 44px;
+    text-align: center;
+    border: none;
+    /* margin-bottom: 1px; */
+    margin-left: -5px;
+    border-radius: 4px;
+}
+.searchIcon{
+    height: 20px;
+    margin-left: 6px;
+    margin-top: 10px;
+    /* background-color: orange; */
+}
+.treciDioVrha{
+    display: flex;
+}
+.Returns{
+    color: white;
+}
+.ReturnsAndOrders{
+    margin-left: 250px;
+}
+.korpaIkona{
+    width: 48px;
+}
+.slikaArtika{
+    width: 180px;
+
+    height:229px ;
+    padding: 20px 20px 20px 20px;
+}
+.Artikal{
+    width: 249px;
+    height: 476px;
+    text-align: center;
+    border-right: solid 1px;
+    border-bottom: solid 1px;
+    border-color:rgb(231, 231, 231);
+    display: inline-block;justify-content: center;
+    
+}
+.BrojOcjene{
+    margin-left: 5px;
+    margin-top: 7px;
+}
+.ImeProizvoda{
+    width: 202px;
+}
+.DioSaSlikom{
+    height: 260px;
+    width: 260px;
+}
+.OcjenaArtiklaSlika,.OcjenaArtikla{
+    width: 100px;
+    height: 20px;
+}
+.OcjenaArtikla{
+    display: flex;
+}
+.OcjenaArtiklaSlika{
+margin-left: 25px;
+margin-top: 5px;
+}
+.BrojOcjene:hover,.AddToCart:hover,.searchDiv2:hover,.Logo:hover,.korpaIkona:hover,
+.ReturnsAndOrders:hover,#BtnSelect:hover
+{
+    cursor: pointer;
+
+}
+#BtnSelect{
+    margin-right: 150px;
+    margin-top: 10px;
+    width: 50px;
+    height: 20px;
+    border-radius: 4px;
+}
+.CijenaArtikla{
+    margin-right: 150px;
+    margin-top: 20px;
+}
+.AddToCart:hover{
+    background-color: rgb(151, 125, 10);
+    
+}
+.korpaIkona{
+    margin-top: 20px;
+}
+.AddToCart{
+    width: 200px;
+    background-color: rgb(247, 202, 0);
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 35px;
+    box-shadow: 0 0 0 0;
+}
+@media (max-width: 450px) {
+    .Artikal{
+        margin-left: 30px;
+    }
+    .SearchBar{
+    border: 2px solid ;
+    color: red;
+    margin-left: 20px;
+    margin-top: 35px;
+    width: 70px;
+    }
+    .Logo,.searchDiv1{
+        width: 70px;
+    }
+    .ReturnsAndOrders{margin-left: 80px;
+    font-size: 10px;}
+    .korpaIkona{
+        margin-left: 80px;
+        width: 30px;
+    }
+    .searchDiv2{
+        position: absolute;
+  margin-left: 100px;    
+  
+  }
+}
+.KrajStranice{
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    position: relative;
+    left: 0;
+    bottom: 0;margin-left: 0;
+    width: 100%;
+  
+    
+}
+body,html {
+    margin:0;
+    padding:0;
+  }
+  .KrajStranice{
+    /* padding: 30px 100px 40px 89px; */
+    /* padding-left: 100px; */
+    padding-top: 79px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .KrajnjiSpan{
+ padding-left: 50px;
+/* padding-top: 100px;   */
+}
