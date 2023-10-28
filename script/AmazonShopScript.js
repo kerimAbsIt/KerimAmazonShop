@@ -177,6 +177,12 @@ document.querySelectorAll('.AddToCart').forEach((button)=>{
             });
         }
         console.log(konj);
+        let ukupno=0;
+        konj.forEach(item =>{
+        ukupno+=item.quantity;
+        });
+        console.log(ukupno);
+document.querySelector('.ukupnouKorpi').innerHTML=ukupno;
     })
 
 

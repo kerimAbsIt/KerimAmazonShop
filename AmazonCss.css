@@ -163,6 +163,13 @@ margin-top: 5px;
     background-color: rgb(151, 125, 10);
     
 }
+.ukupnouKorpi{
+    position: absolute;
+    top: 11px;
+   right: 24px;
+   color: yellow;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .korpaIkona{
     margin-top: 20px;
 }
