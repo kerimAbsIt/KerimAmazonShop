@@ -147,9 +147,38 @@ let Produkti=[
                        </select>
               </div>
               <div class="DodajKosaru">
-                <button class="AddToCart">Add to cart</button>
+                <button class="AddToCart" data-product-ime="${Produkt.ime}">Add to cart</button>
               </div>
        </div>
          `
     })
     document.querySelector('.glavniDiv').innerHTML+=htmlDioKoda;
+ let konj=[];
+    
+document.querySelectorAll('.AddToCart').forEach((button)=>{
+    button.addEventListener('click',()=>{
+    let NazivProizvoda=button.dataset.productIme;
+    let IstiProizvod;
+
+    konj.forEach((proizvod)=>{
+        if(NazivProizvoda==proizvod.ime)
+        {
+            IstiProizvod=proizvod;
+        }
+    });
+        if(IstiProizvod)
+        {
+            IstiProizvod.quantity++;
+        }
+        else{
+            konj.push({
+              ime:NazivProizvoda,
+              quantity:1
+            });
+        }
+        console.log(konj);
+    })
+
+
+
+})
