@@ -4,11 +4,11 @@ body{
     display: inline-block;
     flex-direction: row;
 }
-.Logo:hover,.ReturnsAndOrders:hover,.korpaIkona:hover{
+/* .Logo:hover,.ReturnsAndOrders:hover,.korpaIkona:hover{
     border: solid 1px;
     border-color: white;
     /* padding: 5px; */
-}
+/* } */
 .LogoHuawei{
     width: 200px;
     margin-bottom: 4px;

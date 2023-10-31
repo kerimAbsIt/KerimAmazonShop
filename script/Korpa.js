@@ -7,7 +7,7 @@ export  function AzurirajKorpu(){
 
     });
 }
-export function ubacivanjeKorpe(AjDiProizvoda,naziv){
+export function ubacivanjeKorpe(AjDiProizvoda,naziv,SlikaProizvoda,CijenaProizvoda){
     let IstiProizvod;
 Korpa.forEach((proizvod)=>{
     if(AjDiProizvoda===proizvod.id)
@@ -23,7 +23,9 @@ Korpa.forEach((proizvod)=>{
         Korpa.push({
             id:AjDiProizvoda,
             ime:naziv,
-            kolicina:1
+            kolicina:1,
+            slika:SlikaProizvoda,
+            CijenaProizvoda:CijenaProizvoda
         });
     }
     console.log(Korpa);

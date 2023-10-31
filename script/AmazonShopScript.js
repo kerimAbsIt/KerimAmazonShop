@@ -1,5 +1,6 @@
- import {Produkti} from '../script/ProduktiSkripta.js';
- import {Korpa ,ubacivanjeKorpe, AzurirajKorpu} from '../script/Korpa.js';
+import {Korpa ,ubacivanjeKorpe, AzurirajKorpu} from '../script/Korpa.js';
+import {Produkti} from '../script/ProduktiSkripta.js';
+// import {Kreiraj } from '../placanje/placanje.js';
 
     let htmlDioKoda='';
     Produkti.forEach((Produkt)=>
@@ -25,7 +26,7 @@
                        </select>
               </div>
               <div class="DodajKosaru">
-                <button class="AddToCart" data-product-ime="${Produkt.ime}" data-product-id="${Produkt.id}">Add to cart</button>
+                <button class="AddToCart" data-product-ime="${Produkt.ime}" data-product-id="${Produkt.id}"'>Add to cart</button>
               </div>
        </div>
          `
@@ -36,6 +37,8 @@
                     button.addEventListener('click',()=>{
                     let IdProizvoda=button.dataset.productId;
                     let nazivProizvoda=button.dataset.productIme;
-                    ubacivanjeKorpe(IdProizvoda,nazivProizvoda);
+                    let SlikaProizvoda=button.dataset.productSlika;
+                    let CijenaProizvoda=button.dataset.productCijena;
+                    ubacivanjeKorpe(IdProizvoda,nazivProizvoda,SlikaProizvoda,CijenaProizvoda);
                     })})
  
