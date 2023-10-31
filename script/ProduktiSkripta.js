@@ -110,8 +110,7 @@ export let Produkti=[
         Cijena: 134877,
 
     },
-    {
-        id:11,
+    {id:11,
         image:"/Ikone proizvoda lol/soundx (2).jpg",
         ime:'Huawei Sound X' ,
         ocjena :{
@@ -121,8 +120,7 @@ export let Produkti=[
         Cijena: 17800,
 
     },
-    {
-        id:12,
+    {id:12,
         image:"/Ikone proizvoda lol/mateXS2.jpg",
         ime:'Huawei Mate XS2' ,
         ocjena :{

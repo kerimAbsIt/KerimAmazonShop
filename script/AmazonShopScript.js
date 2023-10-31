@@ -1,4 +1,5 @@
  import {Produkti} from '../script/ProduktiSkripta.js';
+ import {Korpa ,ubacivanjeKorpe, AzurirajKorpu} from '../script/Korpa.js';
 
     let htmlDioKoda='';
     Produkti.forEach((Produkt)=>
@@ -28,41 +29,13 @@
               </div>
        </div>
          `
-    })
-    document.querySelector('.glavniDiv').innerHTML+=htmlDioKoda;
- let konj=[];
-    
-document.querySelectorAll('.AddToCart').forEach((button)=>{
-    button.addEventListener('click',()=>{
-    let IdProizvoda=button.dataset.productId;
-    let IstiProizvod;
-     let NazivProizvoda=button.dataset.productIme;
-    konj.forEach((proizvod)=>{
-        if(IdProizvoda===proizvod.id)
-        {
-            IstiProizvod=proizvod;
-        }
-    });
-        if(IstiProizvod)
-        {
-            IstiProizvod.quantity++;
-        }
-        else{
-            konj.push({
-                id:IdProizvoda,
-              ime:NazivProizvoda,
-              quantity:1
-            });
-        }
-        console.log(konj);
-        let ukupno=0;
-        konj.forEach(item =>{
-        ukupno+=item.quantity;
-        });
-        console.log(ukupno);
-document.querySelector('.ukupnouKorpi').innerHTML=ukupno;
-    })
+        })
+        document.querySelector('.glavniDiv').innerHTML+=htmlDioKoda;
 
-
-
-})
+                document.querySelectorAll('.AddToCart').forEach((button)=>{
+                    button.addEventListener('click',()=>{
+                    let IdProizvoda=button.dataset.productId;
+                    let nazivProizvoda=button.dataset.productIme;
+                    ubacivanjeKorpe(IdProizvoda,nazivProizvoda);
+                    })})
+ 
