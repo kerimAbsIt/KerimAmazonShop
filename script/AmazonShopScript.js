@@ -24,7 +24,7 @@
                        </select>
               </div>
               <div class="DodajKosaru">
-                <button class="AddToCart" data-product-ime="${Produkt.ime}">Add to cart</button>
+                <button class="AddToCart" data-product-ime="${Produkt.ime}" data-product-id="${Produkt.id}">Add to cart</button>
               </div>
        </div>
          `
@@ -34,11 +34,11 @@
     
 document.querySelectorAll('.AddToCart').forEach((button)=>{
     button.addEventListener('click',()=>{
-    let NazivProizvoda=button.dataset.productIme;
+    let IdProizvoda=button.dataset.productId;
     let IstiProizvod;
-
+     let NazivProizvoda=button.dataset.productIme;
     konj.forEach((proizvod)=>{
-        if(NazivProizvoda==proizvod.ime)
+        if(IdProizvoda===proizvod.id)
         {
             IstiProizvod=proizvod;
         }
@@ -49,6 +49,7 @@ document.querySelectorAll('.AddToCart').forEach((button)=>{
         }
         else{
             konj.push({
+                id:IdProizvoda,
               ime:NazivProizvoda,
               quantity:1
             });

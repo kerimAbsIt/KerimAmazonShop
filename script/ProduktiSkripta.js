@@ -1,5 +1,6 @@
 export let Produkti=[
     {
+        id:1,
         image:"/Ikone proizvoda lol/freebudsPro3.jpg",
         ime:'Huawei Freebuds Pro 3' ,
         ocjena :{
@@ -11,6 +12,7 @@ export let Produkti=[
 
     },
     {
+        id:2,
         image:"/Ikone proizvoda lol/mate50pro.jpg",
         ime:'Huawei Mate 50 Pro' ,
         ocjena :{
@@ -21,6 +23,7 @@ export let Produkti=[
 
     },
     {
+        id:3,
         image:'/Ikone proizvoda lol/MatePad11.5.jpg',
         ime:'Huawei Matepad 11' ,
         ocjena :{
@@ -31,6 +34,7 @@ export let Produkti=[
 
     },
     {
+        id:4,
         image:"/Ikone proizvoda lol/sound Joy.jpg",
         ime:'Huawei Sound Joy' ,
         ocjena :{
@@ -41,6 +45,7 @@ export let Produkti=[
 
     },
     {
+        id:5,
         image:"/Ikone proizvoda lol/matebookx.png",
         ime:'Huawei Matebook X' ,
         ocjena :{
@@ -51,6 +56,7 @@ export let Produkti=[
 
     },
     {
+        id:6,
         image:"/Ikone proizvoda lol/p60pro.jpg",
         ime:'Huawei P60 Pro' ,
         ocjena :{
@@ -61,6 +67,7 @@ export let Produkti=[
 
     },
     {
+        id:7,
         image:"/Ikone proizvoda lol/p40pro.jpg",
         ime:'Huawei P40 Pro' ,
         ocjena :{
@@ -71,6 +78,7 @@ export let Produkti=[
 
     },
     {
+        id:8,
         image:"/Ikone proizvoda lol/matebookd13.png",
         ime:'Huawei Matebook D13' ,
         ocjena :{
@@ -81,6 +89,7 @@ export let Produkti=[
 
     },
     {
+        id:9,
         image:"/Ikone proizvoda lol/p50pro.png",
         ime:'Huawei P50 Pro' ,
         ocjena :{
@@ -91,6 +100,7 @@ export let Produkti=[
 
     },
     {
+        id:10,
         image:"/Ikone proizvoda lol/matebookd14.jpg",
         ime:'Huawei Matebook D14' ,
         ocjena :{
@@ -101,6 +111,7 @@ export let Produkti=[
 
     },
     {
+        id:11,
         image:"/Ikone proizvoda lol/soundx (2).jpg",
         ime:'Huawei Sound X' ,
         ocjena :{
@@ -111,6 +122,7 @@ export let Produkti=[
 
     },
     {
+        id:12,
         image:"/Ikone proizvoda lol/mateXS2.jpg",
         ime:'Huawei Mate XS2' ,
         ocjena :{
