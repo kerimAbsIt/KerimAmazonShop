@@ -1,7 +1,28 @@
 // import {Kreiraj } from '../placanje/placanje.js';
 import {Korpa ,ubacivanjeKorpe, AzurirajKorpu} from '../script/Korpa.js';
- import {Produkti} from '../script/ProduktiSkripta.js';
+import {Produkti} from '../script/ProduktiSkripta.js';
+import {FormatCijene} from '../script/Pomocne funkcije/PF.js'
+function PraznjenjeKorpe()
+{
+  Korpa=null;
+}
+document.addEventListener('DOMContentLoaded',function()
+{
+  localStorage.removeItem('Korpa');
+  Korpa=[];
+});
+window.onload=function(){
+  localStorage.removeItem('Korpa');
+  document.querySelector('.ukupnouKorpi').innerHTML=0;
 
+  // Korpa=[];
+}
+const clickableimage=document.querySelector('.korpaIkona');
+clickableimage.addEventListener('click',function()
+{
+  window.location.href="../placanje/Placanje1.html";
+
+})
     let htmlDioKoda='';
     Produkti.forEach((Produkt)=>
     {
@@ -18,7 +39,7 @@ import {Korpa ,ubacivanjeKorpe, AzurirajKorpu} from '../script/Korpa.js';
                   <span class="BrojOcjene">${Produkt.ocjena.brojOcjene}</span>
               </div>
               <div class="CijenaArtikla"> <b>
-                $${(Produkt.Cijena/100).toFixed(2)}
+                $${FormatCijene(Produkt.Cijena)}
               </b> </div>
               <div class="IzborBtn">
                        <select name="Izbor" id="BtnSelect">
@@ -42,4 +63,3 @@ import {Korpa ,ubacivanjeKorpe, AzurirajKorpu} from '../script/Korpa.js';
                     let CijenaProizvoda=button.dataset.productCijena;
                     ubacivanjeKorpe(IdProizvoda,nazivProizvoda,SlikaProizvoda,CijenaProizvoda);
                     })})
- 

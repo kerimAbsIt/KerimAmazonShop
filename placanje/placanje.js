@@ -1,5 +1,7 @@
 import {Korpa} from '../script/Korpa.js';
 import { Produkti } from '../script/ProduktiSkripta.js';   
+import {FormatCijene} from '../script/Pomocne funkcije/PF.js'
+
 let prazanHtml='';
 // console.log(Korpa);
 // console.log(Produkti);
@@ -23,7 +25,7 @@ Korpa.forEach((cartItemss) => {
                     ${cartItemss.ime}
                 </div>
                 <div class="cijenaElementa">
-                    $${(cartItemss.CijenaProizvoda/100).toFixed(2)}
+                    $${FormatCijene(cartItemss.CijenaProizvoda)}
                  </div>
                  <div class="KolicinaElementa">
                  kolicina: ${cartItemss.kolicina}
@@ -37,6 +39,10 @@ Korpa.forEach((cartItemss) => {
                      `;
 
 });
-        
+document.addEventListener('DOMContentLoaded',function()
+{
+  localStorage.removeItem('Korpa');
+  Korpa=[];
+});        
 
 document.querySelector('.lijeviDiv').innerHTML+=cartSummaryHTML;

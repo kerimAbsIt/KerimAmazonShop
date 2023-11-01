@@ -38,6 +38,8 @@ margin-top: 30px;
     margin-left: 100px;
     width: 250px;
     height: 350px;
+    padding: 10px;
+    border-radius: 15px;
     
 }
 body{
@@ -122,3 +124,29 @@ height: 100px;
     margin-left: 10px;
     padding-top: 40px;
 }
+.SpanDesnogDiva4{
+    display: inline-block;
+    margin-bottom: 40px;
+}
+.SpanDesnogDiva{
+    display: inline-block;
+}
+.SpanDesnogDiva2{
+    display: inline-block;
+}
+.desniSpan4,.desniSpan3{
+    margin-left: 20%;
+}
+
+.SpanDesnogDiva,.SpanDesnogDiva2,.SpanDesnogDiva4{
+    padding-bottom: 30px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(183, 155, 17);;
+}
+/* .desniSpan3{
+    position: absolute;
+    right: 80px;
+    bottom: 40px;
+} */
