@@ -19,7 +19,7 @@ export let Produkti=[
             SlikaOcjene:'ocjenaArtikla',
             brojOcjene:24
         },
-        Cijena: 1099000,
+        Cijena: 10990,
 
     },
     {

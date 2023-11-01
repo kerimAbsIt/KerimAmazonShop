@@ -1,5 +1,5 @@
 export let Korpa=JSON.parse(localStorage.getItem('Korpa'));
-// export let Korpa=[];
+
 export  function AzurirajKorpu(){
     let ukupno=0;
     Korpa.forEach(item =>{
@@ -10,6 +10,10 @@ export  function AzurirajKorpu(){
 }
 export function ubacivanjeKorpe(AjDiProizvoda,naziv,SlikaProizvoda,CijenaProizvoda){
     let IstiProizvod;
+    if(Korpa===null)
+    {
+        Korpa=[];
+    }
 Korpa.forEach((proizvod)=>{
     if(AjDiProizvoda===proizvod.id)
     {
@@ -30,8 +34,8 @@ Korpa.forEach((proizvod)=>{
         });
     }
     console.log(Korpa);
-AzurirajKorpu();
-SacuvajPodatkeKorpe();
+  AzurirajKorpu();
+  SacuvajPodatkeKorpe();
 }
 function SacuvajPodatkeKorpe()
 {

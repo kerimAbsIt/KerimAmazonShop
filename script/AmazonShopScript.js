@@ -26,8 +26,8 @@ import {Korpa ,ubacivanjeKorpe, AzurirajKorpu} from '../script/Korpa.js';
                        </select>
               </div>
               <div class="DodajKosaru">
-                <button class="AddToCart" data-product-ime="${Produkt.ime}" data-product-id="${Produkt.id}" data-product-slika=''${Produkt.image
-                } data-product-cijena='${Produkt.Cijena}'>Add to cart</button>
+                <button class="AddToCart" data-product-ime="${Produkt.ime}" data-product-id="${Produkt.id}" data-product-slika='${Produkt.image} 
+                'data-product-cijena='${Produkt.Cijena}'>Add to cart</button>
               </div>
        </div>
          `

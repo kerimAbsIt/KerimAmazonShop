@@ -15,24 +15,22 @@ margin-top: 30px;
 }
 .GlavniDiv{
     display: flex;
-    border-color: black;
-    border: solid 2px;
     /* position: absolute; */
     top: 150px;
     left: 250px;
     right: 250px;
-    height: 600px;
+    height: 60%;
     width: 700px;
     margin-bottom: 100px;
     margin-top: 50px;
     margin-left: 400px;
 }
 .lijeviDiv{
-    border: solid 2px;
-    border-color: aqua;
     width: 360px;
     /* margin-left: 150px; */
 
+}.tekstDiva{
+    margin-left: 20px;
 }
 .desniDiv{
     border: solid 2px;
@@ -85,9 +83,13 @@ top: 40px;
 }
 .SlikaDiv{
     width: 100px;
+    background-size:cover ;
+    background-position: center;
 }
 .slikaArtikla{
     width: 140px;
+    margin-left: 30px;
+    padding-left: 20px;
 }
 body,html{
     padding: 0;
@@ -103,7 +105,20 @@ margin: 0;
 }
 .ElementDiva{
     display: flex;
+    border: solid 0.5px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(243, 243, 243);
 }
 .ImeElementa,.cijenaElementa,.KolicinaElementa{
     margin-left: 40px;
+}
+.slikaArtika
+{
+height: 100px;
+}
+.ElementDiva{
+    margin-left: 10px;
+    padding-top: 40px;
 }

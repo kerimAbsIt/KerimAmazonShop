@@ -1,45 +1,42 @@
 import {Korpa} from '../script/Korpa.js';
 import { Produkti } from '../script/ProduktiSkripta.js';   
 let prazanHtml='';
-console.log(Korpa);
-console.log(Produkti);
+// console.log(Korpa);
+// console.log(Produkti);
 // Kreiraj(); 
 
-let cartSummaryHTML = '';
+let cartSummaryHTML='';
 
-Korpa.forEach((cartItem) => {
-  const productId = cartItem.productId;
+Korpa.forEach((cartItemss) => {
 
-  let matchingProduct;
+    let cartItemId = cartItemss.id;
+    console.log(cartItemId);
+           
+        cartSummaryHTML += `
+         <div class="ElementDiva">
+         <div class="SlikaDiv">
+             <img src="${cartItemss.slika}" class="slikaArtika" alt="">
+                            
+             </div>
+        <div class="tekstDiva">
+           <div class="ImeElementa">
+                    ${cartItemss.ime}
+                </div>
+                <div class="cijenaElementa">
+                    $${(cartItemss.CijenaProizvoda/100).toFixed(2)}
+                 </div>
+                 <div class="KolicinaElementa">
+                 kolicina: ${cartItemss.kolicina}
+                 </div>
+                 </div>
+                 <div class="OdabirDostave">
 
-  Produkti.forEach((product) => {
-    if (product.id === productId) {
-      matchingProduct = product;
-    }
-  });
-  cartSummaryHTML += `
-  <div class="ElementDiva">
-  <div class="SlikaDiv">
-      <img src="${matchingProduct.image}" class="slikaArtika" alt="">
-      
-  </div>
-  <div class="tekstDiva">
-     <div class="ImeElementa">
-      ${matchingProduct.ime}
-     </div>
-     <div class="cijenaElementa">
-       ${matchingProduct.cijena}
-     </div>
-     <div class="KolicinaElementa">${stavkaKorpe.kolicina}</div>
-  </div>
-  <div class="OdabirDostave">
-
-      </div>
-  </div>
-   </div>
-       `;
+                    </div>
+                </div>
+                 </div>
+                     `;
 
 });
         
 
-document.querySelector('.lijeviDiv').innerHTML+=prazanHtml;
+document.querySelector('.lijeviDiv').innerHTML+=cartSummaryHTML;
