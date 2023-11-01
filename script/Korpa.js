@@ -1,4 +1,5 @@
-export let Korpa=[];
+export let Korpa=JSON.parse(localStorage.getItem('Korpa'));
+// export let Korpa=[];
 export  function AzurirajKorpu(){
     let ukupno=0;
     Korpa.forEach(item =>{
@@ -30,4 +31,9 @@ Korpa.forEach((proizvod)=>{
     }
     console.log(Korpa);
 AzurirajKorpu();
+SacuvajPodatkeKorpe();
+}
+function SacuvajPodatkeKorpe()
+{
+    localStorage.setItem('Korpa',JSON.stringify(Korpa));
 }
