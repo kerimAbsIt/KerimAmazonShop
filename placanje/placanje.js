@@ -39,19 +39,19 @@ Korpa.forEach((cartItemss) => {
                  <div class="RadioDiv">
                  <div class=radio1>
                  <label class="NaslovRadio">Odaberite nacin dostave</label>
-                 <label for="java" class="radio">Standard [5 KM; 6-9 radnih dana]</label>
+                 <label for="java" class="radio">Standard [$5 ; 6-9 radnih dana]</label>
                  <input type="radio" class="" id="StandardDostava" name="languages" value="java">
                  
                  </div>
                  
                  <div class="radio2">
-                 <label for="python" class="radio" >Brza dostava[ 9 KM; 3-5 radnih dana]</label>
+                 <label for="python" class="radio" >Brza dostava[$9; 3-5 radnih dana]</label>
                  <input type="radio" class="" id="BrzaDostava" name="languages" value="python">
  
                  </div>
                  
                  <div class="radio3">
-                 <label for="javascript" class="radio">1 Dan dostava[20 KM</label>
+                 <label for="javascript" class="radio">1 Dan dostava[$20 1 dan] </label>
                  <input type="radio" class="" id="danDostava" name="languages" value="javascript">
                  
                  </div>

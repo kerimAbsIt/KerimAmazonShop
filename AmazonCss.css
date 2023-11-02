@@ -131,6 +131,7 @@ header{
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center;
+    margin-top: 20px;
     padding-left: 0;
 }
 .IzborBtn{
