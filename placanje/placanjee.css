@@ -20,17 +20,17 @@ margin-top: 30px;
     left: 250px;
     right: 250px;
     height: 60%;
-    width: 700px;
+    width: 900px;
     margin-bottom: 100px;
     margin-top: 50px;
-    margin-left: 400px;
+    margin-left: 300px;
 }
 .lijeviDiv{
-    width: 360px;
+    width: 600px;
     /* margin-left: 150px; */
 
 }.tekstDiva{
-    margin-left: 20px;
+    margin-left: 10px;
 }
 .desniDiv{
     border: solid 2px;
@@ -135,6 +135,9 @@ height: 100px;
     display: inline-block;
 }
 .desniSpan4,.desniSpan3{
+    /* margin-left: 20%; */
+}
+.PosebniSpan{
     margin-left: 20%;
 }
 
@@ -150,3 +153,28 @@ height: 100px;
     right: 80px;
     bottom: 40px;
 } */
+.RadioDiv{
+    display: block;
+    margin-left: 20px;
+}
+.NaslovRadio{
+    display: block;
+    width: 230px;
+}
+.radio{
+    font-size: 14px;
+    position: relative;
+    right: 0;
+   /* margin-left: 40px; */
+   /* margin-bottom: 40px; */
+}
+.radio3.radio2,.radio1{
+/* display: flex; */
+}
+input{display: flex;}
+.ImeElementa{
+    margin-bottom: 20px;
+}
+.desniSpan2{
+    margin-left: 20px;
+}
