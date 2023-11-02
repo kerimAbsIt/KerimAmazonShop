@@ -42,6 +42,8 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-left: 0;
+    padding: 0;
 }
 .searchDiv2{
     /* margin-bottom: 40px; */
@@ -97,16 +99,16 @@ header{
     width: 48px;
 }
 .slikaArtika{
-    width: 220px;
+    max-width: 249px;
 
     height:229px ;
-    padding: 20px 20px 20px 20px;
+    /* padding: 20px 20px 20px 20px; */
 }
 .DodajKosaru{
     text-align: center;
 }
 .Artikal{
-    width: 249px;
+    max-width: 249px;
     height: 476px;
     /* text-align: center; */
     border-right: solid 1px;
@@ -121,10 +123,15 @@ header{
 }
 .ImeProizvoda{
     width: 202px;
+    margin-top: 20px;
 }
 .DioSaSlikom{
-    height: 260px;
-    width: 260px;
+    height: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    padding-left: 0;
 }
 .IzborBtn{
     margin-left: 30px;
@@ -180,6 +187,7 @@ margin-top: 5px;
     border-radius: 10px;
     height: 35px;
     box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+    border: none;
 }
 @media (max-width: 450px) {
     .Artikal{
@@ -220,6 +228,7 @@ margin-top: 5px;
 body,html {
     margin:0;
     padding:0;
+    overflow-x: hidden;
   }
   .KrajStranice{
     /* padding: 30px 100px 40px 89px; */

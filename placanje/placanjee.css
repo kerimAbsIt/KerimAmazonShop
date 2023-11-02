@@ -73,7 +73,7 @@ top: 40px;
 }
 .KrajStranice{
     bottom: 0px;
-    height: 70px;
+    height: 120px;
     background-color: black;
     width: 100%;
     position: relative;
@@ -85,8 +85,8 @@ top: 40px;
 }
 .SlikaDiv{
     width: 100px;
-    background-size:cover ;
-    background-position: center;
+    /* background-size:cover ; */
+    /* background-position: center; */
 }
 .slikaArtikla{
     width: 140px;
@@ -103,7 +103,7 @@ margin: 0;
 }
 .KrajStraniceTekst{
     margin-left: 30px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .ElementDiva{
     display: flex;
@@ -165,6 +165,7 @@ height: 100px;
     font-size: 14px;
     position: relative;
     right: 0;
+    margin-top:20px ;
    /* margin-left: 40px; */
    /* margin-bottom: 40px; */
 }

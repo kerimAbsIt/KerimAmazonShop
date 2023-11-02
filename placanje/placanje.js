@@ -1,7 +1,12 @@
 import {Korpa} from '../script/Korpa.js';
 import { Produkti } from '../script/ProduktiSkripta.js';   
 import {FormatCijene} from '../script/Pomocne funkcije/PF.js'
+let AmazonLogo=document.querySelector('.AmazonLogo');
 
+AmazonLogo.addEventListener('click',function()
+{
+    window.location.href='../AmazonHtml.html';
+});
 let prazanHtml='';
 // console.log(Korpa);
 // console.log(Produkti);
@@ -108,7 +113,7 @@ StandardDostava.addEventListener("change",function(){
 })
 let finalniIznosDostave=Number(document.querySelector('.desniSpan3').innerHTML);
 let finalniIznosProizvoda=Number(document.querySelector('.desniSpan4').innerHTML);
-finalniIznosDostave.innerHTML=iznosDostave;
+document.querySelector('.desniSpan3').innerHTML=iznosDostave;
 function PromjenaDetalja()
 {
    finalniIznosProizvoda=Number(document.querySelector('.desniSpan4').innerHTML);
