@@ -6,6 +6,14 @@ function PraznjenjeKorpe()
 {
   Korpa=null;
 }
+let AmazonLogo=document.querySelector('.Logo');
+AmazonLogo.addEventListener('click',function(){
+  window.location.href='https://www.amazon.com/';
+})
+let HuaweiLogo=document.querySelector('.LogoHuaweiSl');
+HuaweiLogo.addEventListener('click',function(){
+  window.location.href="https://www.huawei.com";
+});
 document.addEventListener('DOMContentLoaded',function()
 {
   localStorage.removeItem('Korpa');

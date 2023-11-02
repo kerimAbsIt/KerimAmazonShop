@@ -3,17 +3,23 @@ import { Produkti } from '../script/ProduktiSkripta.js';
 import {FormatCijene} from '../script/Pomocne funkcije/PF.js'
 import { IzbrisiArtikal } from '../script/Korpa.js';
 let AmazonLogo=document.querySelector('.AmazonLogo');
-
 AmazonLogo.addEventListener('click',function()
 {
     window.location.href='../AmazonHtml.html';
 });
+let KerimLogo=document.querySelector('.KerimLogo');
+KerimLogo.addEventListener('click',function()
+{
+    window.location.href='../Ikone proizvoda lol/SmijesnaSlika.jpeg';
+})
 let prazanHtml='';
 // console.log(Korpa);
 // console.log(Produkti);
 // Kreiraj();
-
+IzracunajUkupnuCijenu();
+IzracunajArtikle();
 let cartSummaryHTML='';
+DodavanjeArtikalauHTML();
 let ukupnoArtikala=Korpa.length;
 UpdateLijevogDiva(Korpa);
 function UpdateLijevogDiva(Korpa)
@@ -69,25 +75,36 @@ function UpdateLijevogDiva(Korpa)
                     </div>
                      </div>
                          `;
+                         DodavanjeArtikalauHTML();
     
     });
+IzracunajUkupnuCijenu();
 }
 
 document.addEventListener('DOMContentLoaded',function()
 {
   localStorage.removeItem('Korpa');
   UpdateLijevogDiva();
-//   Korpa=[];
 });
-let rezCijene=0;
-Korpa.forEach((stavka)=> {
-    rezCijene+=+stavka.CijenaProizvoda;
-});
+function IzracunajUkupnuCijenu()
+{
+        let rezCijene=0;
+        Korpa.forEach((stavka)=> {
+        rezCijene+=+stavka.CijenaProizvoda;
+      });
+        document.querySelector('.desniSpan4').innerHTML=+FormatCijene(rezCijene);
+};
+function IzracunajArtikle()
+{
+    let ukupnoArtikala=Korpa.length;
+    document.querySelector('.SpanDesnogDiva').innerHTML='Artikal('+ ukupnoArtikala +')';
+    document.querySelector('.updateNaslov').innerHTML=ukupnoArtikala;
+}
+function DodavanjeArtikalauHTML()
+{
+    document.querySelector('.lijeviDiv').innerHTML+=cartSummaryHTML;
 
-document.querySelector('.desniSpan4').innerHTML=+FormatCijene(rezCijene);
-document.querySelector('.SpanDesnogDiva').innerHTML='Artikal('+ ukupnoArtikala +')';
-document.querySelector('.updateNaslov').innerHTML=ukupnoArtikala;
-document.querySelector('.lijeviDiv').innerHTML+=cartSummaryHTML;
+}
 
 let danDostava=document.getElementById('danDostava');
 let BrzaDostava=document.getElementById('BrzaDostava');
@@ -144,8 +161,8 @@ var kontejneri=document.querySelector(`.kontejner${UzetiId}`);
         setTimeout(function() {
             BrisiKontejner(kontejneri);
         }, 2000);
-        
-        // kontejneri.remove();
+        IzracunajUkupnuCijenu();
+        IzracunajArtikle();
         console.log(kontejneri);
     })})
 

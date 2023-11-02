@@ -9,9 +9,13 @@ body{
     border-color: white;
     /* padding: 5px; */
 /* } */
-.LogoHuawei{
+.LogoHuaweiSl{
     width: 200px;
     margin-bottom: 4px;
+    cursor: pointer;
+}
+.LogoHuawei:hover{
+    opacity: 80%;
 }
 .Logo:hover
 .VrhStranice,header{
