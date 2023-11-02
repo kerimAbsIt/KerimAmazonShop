@@ -3,6 +3,10 @@ header{
     position: static;
     left: 0;
     top:0;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(55, 55, 215);
+    font-style: oblique;
+    font-weight: 300;
 }
 .KerimLogo{
     width: 250px;
@@ -109,7 +113,7 @@ margin: 0;
     display: flex;
     border: none;
     border-radius: 20px;
-    padding: 10px;
+    padding: 40px;
     margin-bottom: 10px;
     background-color: rgb(243, 243, 243);
 }
@@ -148,6 +152,9 @@ height: 100px;
     cursor: pointer;
     background-color: rgb(183, 155, 17);;
 }
+.btn:active{
+    opacity: 60%;
+}
 /* .desniSpan3{
     position: absolute;
     right: 80px;
@@ -178,4 +185,20 @@ input{display: flex;}
 }
 .desniSpan2{
     margin-left: 20px;
+}
+.izbrisiButton{
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 80px;
+    border-radius: 4px;
+    height: 30px;
+    border:none;
+    background-color: rgb(167, 235, 213);
+}
+.izbrisiButton:hover{
+    background-color: rgb(125, 174, 158);
+    cursor: pointer;
+}
+.izbrisiButton:active{
+    opacity: 60%;
 }

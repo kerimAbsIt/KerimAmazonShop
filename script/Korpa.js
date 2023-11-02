@@ -33,11 +33,24 @@ Korpa.forEach((proizvod)=>{
             CijenaProizvoda:CijenaProizvoda
         });
     }
-    console.log(Korpa);
+    // console.log(Korpa);
   AzurirajKorpu();
   SacuvajPodatkeKorpe();
 }
 function SacuvajPodatkeKorpe()
 {
     localStorage.setItem('Korpa',JSON.stringify(Korpa));
+}
+
+export function IzbrisiArtikal(primaIDartikla)
+{
+    console.log(1);
+    let NovaKorpa=[];
+    Korpa.forEach((item)=>{
+           if(item.id!==primaIDartikla)
+           {
+            NovaKorpa.push(item);
+           }
+        })
+         Korpa=NovaKorpa;
 }
