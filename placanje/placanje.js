@@ -94,13 +94,21 @@ function IzracunajUkupnuCijenu()
 };
 
 function PromjenaDetalja()
-{
+{if(Korpa.length===0)
+    {
+        document.querySelector('.desniSpan4').innerHTML="0";
+      document.querySelector('.desniSpan2').innerHTML="0";
+      document.querySelector('.desniSpan3').innerHTML="0";
+
+    }
+    else{
+        let finalniIznosDostave=Number(document.querySelector('.desniSpan3').innerHTML);
+        IzracunajUkupnuCijenu();
+        // finalniIznosDostave=Number(document.querySelector('.desniSpan3').innerHTML);
+            IzracunajCijenuSaDostavom();         
+    }
     // let finalniIznosProizvoda=Number(document.querySelector('.desniSpan4').innerHTML);
-    let finalniIznosDostave=Number(document.querySelector('.desniSpan3').innerHTML);
-    IzracunajUkupnuCijenu();
-    // finalniIznosDostave=Number(document.querySelector('.desniSpan3').innerHTML);
-        IzracunajCijenuSaDostavom();     
-}
+    }
 function IzracunajCijenuSaDostavom()
 {
     let finalniIznosProizvoda=Number(document.querySelector('.desniSpan4').innerHTML);
@@ -124,7 +132,13 @@ let BrzaDostava=document.getElementById('BrzaDostava');
 let StandardDostava=document.getElementById('StandardDostava');
 let iznosDostave=0;
 danDostava.addEventListener("change",function(){
-         if(danDostava.checked)
+    if(Korpa.length===0)
+    {
+        iznosDostave=0;
+        document.querySelector('.desniSpan3').innerHTML=iznosDostave;
+    }
+else    
+    if(danDostava.checked)
          {
             iznosDostave=20 ;
          }
@@ -133,18 +147,32 @@ danDostava.addEventListener("change",function(){
 
 })
 BrzaDostava.addEventListener("change",function(){
+    if(Korpa.length===0)
+    {
+        iznosDostave=0;
+    }
+else
+{
     if(BrzaDostava.checked)
     {
        iznosDostave=9;
     }
-    document.querySelector('.desniSpan3').innerHTML=iznosDostave;
+}
+document.querySelector('.desniSpan3').innerHTML=iznosDostave;
 PromjenaDetalja();
 })
 StandardDostava.addEventListener("change",function(){
+    if(Korpa.length===0)
+    {
+        iznosDostave=0;
+    }
+else
+{
     if(StandardDostava.checked)
     {
        iznosDostave=5 ;
     }
+}
     document.querySelector('.desniSpan3').innerHTML=iznosDostave;
     PromjenaDetalja();
 
