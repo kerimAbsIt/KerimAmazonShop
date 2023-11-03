@@ -19,7 +19,6 @@ let prazanHtml='';
 IzracunajUkupnuCijenu();
 IzracunajArtikle();
 let cartSummaryHTML='';
-DodavanjeArtikalauHTML();
 let ukupnoArtikala=Korpa.length;
 UpdateLijevogDiva(Korpa);
 function UpdateLijevogDiva(Korpa)
@@ -75,7 +74,6 @@ function UpdateLijevogDiva(Korpa)
                     </div>
                      </div>
                          `;
-                         DodavanjeArtikalauHTML();
     
     });
 IzracunajUkupnuCijenu();
@@ -94,17 +92,32 @@ function IzracunajUkupnuCijenu()
       });
         document.querySelector('.desniSpan4').innerHTML=+FormatCijene(rezCijene);
 };
+
+function PromjenaDetalja()
+{
+    // let finalniIznosProizvoda=Number(document.querySelector('.desniSpan4').innerHTML);
+    let finalniIznosDostave=Number(document.querySelector('.desniSpan3').innerHTML);
+    IzracunajUkupnuCijenu();
+    // finalniIznosDostave=Number(document.querySelector('.desniSpan3').innerHTML);
+        IzracunajCijenuSaDostavom();     
+}
+function IzracunajCijenuSaDostavom()
+{
+    let finalniIznosProizvoda=Number(document.querySelector('.desniSpan4').innerHTML);
+   let finalniIznosDostave=Number(document.querySelector('.desniSpan3').innerHTML);
+    let ukupniRacun=document.querySelector('.desniSpan2');
+    ukupniRacun.innerHTML='$'+Number(finalniIznosDostave+finalniIznosProizvoda);
+
+}
+ 
 function IzracunajArtikle()
 {
     let ukupnoArtikala=Korpa.length;
     document.querySelector('.SpanDesnogDiva').innerHTML='Artikal('+ ukupnoArtikala +')';
     document.querySelector('.updateNaslov').innerHTML=ukupnoArtikala;
 }
-function DodavanjeArtikalauHTML()
-{
-    document.querySelector('.lijeviDiv').innerHTML+=cartSummaryHTML;
 
-}
+document.querySelector('.lijeviDiv').innerHTML+=cartSummaryHTML;
 
 let danDostava=document.getElementById('danDostava');
 let BrzaDostava=document.getElementById('BrzaDostava');
@@ -136,17 +149,12 @@ StandardDostava.addEventListener("change",function(){
     PromjenaDetalja();
 
 })
-let finalniIznosDostave=Number(document.querySelector('.desniSpan3').innerHTML);
-let finalniIznosProizvoda=Number(document.querySelector('.desniSpan4').innerHTML);
-document.querySelector('.desniSpan3').innerHTML=iznosDostave;
-function PromjenaDetalja()
-{
-   finalniIznosProizvoda=Number(document.querySelector('.desniSpan4').innerHTML);
-   finalniIznosDostave=Number(document.querySelector('.desniSpan3').innerHTML);
+// let finalniIznosDostave=Number(document.querySelector('.desniSpan3').innerHTML);
 
-    let ukupniRacun=document.querySelector('.desniSpan2');
-    ukupniRacun.innerHTML='$'+Number(finalniIznosDostave+finalniIznosProizvoda);
-}
+// let finalniIznosProizvoda=Number(document.querySelector('.desniSpan4').innerHTML);
+
+document.querySelector('.desniSpan3').innerHTML=iznosDostave;
+
 let IzbrisiBtn1=document.querySelectorAll('.izbrisiButton');
 
 IzbrisiBtn1.forEach((artkl)=>
@@ -161,7 +169,7 @@ var kontejneri=document.querySelector(`.kontejner${UzetiId}`);
         setTimeout(function() {
             BrisiKontejner(kontejneri);
         }, 2000);
-        IzracunajUkupnuCijenu();
+        PromjenaDetalja();
         IzracunajArtikle();
         console.log(kontejneri);
     })})
