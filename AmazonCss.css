@@ -108,6 +108,12 @@ header{
     height:229px ;
     /* padding: 20px 20px 20px 20px; */
 }
+.slikaArtika:hover{
+    /* width: 400px; */
+    /* height: auto; */
+    transform: scale(1.6);
+    transition: transform 0.3s, filter 0.3s;
+}
 .DodajKosaru{
     text-align: center;
 }
